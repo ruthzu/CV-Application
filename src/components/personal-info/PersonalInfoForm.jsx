@@ -1,13 +1,15 @@
 // PersonalInfoForm.jsx
+import "../../styles/form.css"
 export default function PersonalInfoForm({personalInfo,setPersonalInfo}){
     return(
-        <div>
+        <div className="form-section"> 
             <h1 className="section-title">Personal Details</h1>
             <form>
-                <div className="input-name-div">
+                <div className="input input-name-div">
                 <label htmlFor="input-name" >Full name</label>
                 <input 
-                className="input-name"
+                id="input-name"
+
                 type="text"
                 value={personalInfo.fullName}
                 onChange={(e)=>setPersonalInfo(prev => ({... prev,fullName:e.target.value}))}
@@ -16,10 +18,10 @@ export default function PersonalInfoForm({personalInfo,setPersonalInfo}){
                 </input>
                 </div>
 
-                <div className="input-email-div">
+                <div className="input input-email-div">
                 <label htmlFor="input-email" >Email</label>
                 <input 
-                className="input-email"
+                id="input-email"
                 type="email"
                 value={personalInfo.email}
 onChange={(e)=>setPersonalInfo(prev => ({... prev,email:e.target.value}))}
@@ -27,9 +29,9 @@ onChange={(e)=>setPersonalInfo(prev => ({... prev,email:e.target.value}))}
                 </input>
                 </div>
 
-                        <div className="input-phNum-div">
+                        <div className=" input input-phNum-div">
                 <label htmlFor="input-phNum" >Phone number</label>
-                <input className="input-phNum"
+                <input id="input-phNum"
                 type="tel"
                 value={personalInfo.phonenumber}
 onChange={(e)=>setPersonalInfo(prev => ({... prev,phonenumber:e.target.value}))}
@@ -37,10 +39,10 @@ onChange={(e)=>setPersonalInfo(prev => ({... prev,phonenumber:e.target.value}))}
 
                 </input>
                 </div>
-                <div className="input-address-div">
+                <div className="input input-address-div">
                 <label htmlFor="input-address" >Address</label>
                 <input 
-                className="input-address"
+                id="input-address"
                 type="text"
                 value={personalInfo.address}
 onChange={(e)=>setPersonalInfo(prev => ({... prev,address:e.target.value}))}

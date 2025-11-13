@@ -1,7 +1,7 @@
-export function buttons(){
-    return(
-        <div>
-<div></div>
-        </div>
-    )
-}
+// export function buttons(){
+//     return(
+//         <div>
+//             <button>{De}</button>
+//         </div>
+//     )
+// }

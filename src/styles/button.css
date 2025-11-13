@@ -1,0 +1,30 @@
+.sidebar{
+    position:sticky;
+    top: 5px;
+    left: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    /* width:572px; */
+    width: 100%;
+    background-color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.sidebar button{
+    padding: 6px;
+    font-size: inherit;
+    flex-grow: 1;
+    border:none ;
+}
+.clear-btn{
+    border: none;
+    color: #b91c1c;
+    background-color: inherit;
+}
+.load-btn{
+    border-radius: 4px;
+    background-color: #efefef;
+}

@@ -1,0 +1,33 @@
+
+ .form-section{
+    padding: 18px;
+    background-color:white;
+    border-radius: 12px;
+    width: inherit;
+ }
+label{
+    font-size: 16px;
+}
+.input{
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    padding-bottom: 12px;
+
+}
+input{
+     background-color: #f3f4f6;
+     border: none;
+    border-radius: 10px;
+    padding: 10px;
+     white-space: normal;   /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if needed */
+    overflow-wrap: break-word;
+}
+textarea{
+    resize: vertical;     /* user can adjust height */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}

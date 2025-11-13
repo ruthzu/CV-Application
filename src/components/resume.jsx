@@ -1,13 +1,15 @@
-// import AddEducationSection from "./education/AddEducationSection";
-// import EducationForm from "./education/EducationForm";
-// import AddEducationSection from "./education/AddEducationSection";
-// import PersonalInfoSection from "./personal-info/PersonalInfoSection"
+//resume.jsx
+import "../styles/resume.css"
 import PersonalInfoDisplay from "./personal-info/PersonalInfoDisplay"
-export default function Resume({personalInfo}){
+import EducationInfoDisplay from "./education/EducationInfoDisplay";
+import ExperienceinfoDisplay from "./experience/ExperienceinfoDisplay";
+export default function Resume({personalInfo,educationInfo,experienceInfo}){
     return(
-    <div>
-    {/* <PersonalInfoSection /> */}
+    <div className="resume right-section">
             <PersonalInfoDisplay personalInfo={personalInfo}/>
+            <div className="edu-exp">
+            <EducationInfoDisplay educationInfo={educationInfo}/>
+            <ExperienceinfoDisplay experienceInfo={experienceInfo}/></div>
     </div>
     );
 }
