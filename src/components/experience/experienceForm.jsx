@@ -1,8 +1,20 @@
 // experienceForm.jsx
 import "../../styles/form.css"
 export default function ExperienceForm({experienceInfo,setExperienceInfo}){
+          function handleclick(){
+ const edu=document.querySelector(".edu-form")
+ const exp=document.querySelector(".exp-form")
+ const edubtn=document.querySelector(".edu-button")
+ const expbtn=document.querySelector(".exp-button")
+  edu.classList.toggle("hidden")
+  exp.classList.toggle("hidden")
+   edubtn.classList.toggle("hidden")
+  expbtn.classList.toggle("hidden")
+  }
     return(
-        <div className="form-section">
+         <div>
+            <button onClick={handleclick} className="exp-button"><i className="fas fa-briefcase"></i> Experience</button>
+        <div className="form-section exp-form hidden">
             <h1 className="section-title experience-section">Experience</h1>
             <form>
                 <div className="input input-company-name-div">
@@ -75,7 +87,7 @@ onChange={(e)=>setExperienceInfo(prev => ({... prev,description:e.target.value})
                 </div>
 
             </form>
-        </div>
+        </div></div>
     )
 } 
 

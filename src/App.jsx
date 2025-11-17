@@ -10,48 +10,35 @@ import { Sidebar } from "./components/sidebar"
 import Resume from "./components/resume"
 import PersonalInfoForm from "./components/personal-info/PersonalInfoForm"
 import { useState } from "react"
-import EducationListDisplay from "./components/education/EducationListDisplay"
 import EducationForm from "./components/education/EducationForm"
 import ExperienceForm from "./components/experience/experienceForm.jsx"
-import ExperienceListDisplay from "./components/experience/ExperienceListDisplay.jsx"
 function App(){
 
     const  [personalInfo,setPersonalInfo]=useState({
-          fullName:"asdfghj",
-          email:"josephine.meyers@mail.co.uk",
-          phonenumber:"+44 3245 5521 5521",
-          address:"London, UK",
+         fullName: "Emma Williams",
+      email: "emma.williams@example.com",
+      phonenumber: "+44 7912 345678",
+      address: "London, United Kingdom",
       });
  const  [educationInfo,setEducationInfo]=useState({
-          school:"London City University",
-          degree:"Bachelors in Economics",
-          startDate:"08/2020",
-          endDate:"present",
-          location:"New York City, US",
+           school: "University of London",
+      degree: "BSc Computer Science",
+      startDate: "09/2022",
+      endDate: "06/2026",
+      location: "London, UK",
       });
 
 const [experienceInfo,setExperienceInfo]=useState({
 
-companyName:"asdfghj",
-
-positionTitle:"sdfghj@gmail.com",
-
-startDate:"123456789",
-
-endDate:"123456789",
-
-location:"sdfghjkl",
-
-description:"sdfghj",
+ companyName: "TechNova Solutions",
+      positionTitle: "Frontend Developer Intern",
+      startDate: "06/2023",
+      endDate: "09/2023",
+      location: "London, UK",
+      description: " Developed responsive web interfaces using React and Tailwind CSS. Collaborated with backend teams to integrate REST APIs. Improved page performance by 20% through optimized rendering.",
 
 });
 
-
-
-
-
-const [experienceList,setExperienceList]=useState(["asdfg","sdfgh"])      
-const [educationList,setEducationList]=useState(["university","highschool"])
 
 return(
     <div>
@@ -59,11 +46,18 @@ return(
       <section>
           <div className="container">
             <div className="left-section">
-          <Sidebar />
+          <Sidebar  
+  personalInfo={personalInfo} 
+  educationInfo={educationInfo}
+  experienceInfo={experienceInfo}
+  setpersonalInfo={setPersonalInfo}
+  seteducationInfo={setEducationInfo}
+  setexperienceInfo={setExperienceInfo}
+/>
            <PersonalInfoForm personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>
           {/* <div className="form-section"> */}
-          <EducationListDisplay educationList={educationList} setEducationList={setEducationList}/>
-          <ExperienceListDisplay experienceList={experienceList} setExperienceList={setExperienceList}/>
+          {/* <EducationListDisplay educationList={educationList} setEducationList={setEducationList}/> */}
+          {/* <ExperienceListDisplay experienceList={experienceList} setExperienceList={setExperienceList}/> */}
           <EducationForm educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
           <ExperienceForm experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
           {/* </div> */}

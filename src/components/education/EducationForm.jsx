@@ -1,8 +1,20 @@
 // EducationForm.jsx
 import "../../styles/form.css"
 export default function EducationForm({educationInfo,setEducationInfo}){
+      function handleclick(){
+ const edu=document.querySelector(".edu-form")
+ const exp=document.querySelector(".exp-form")
+  const edubtn=document.querySelector(".edu-button")
+ const expbtn=document.querySelector(".exp-button")
+  edu.classList.toggle("hidden")
+  exp.classList.toggle("hidden")
+  edubtn.classList.toggle("hidden")
+  expbtn.classList.toggle("hidden")
+  }
     return(
-        <div className="form-section">
+        <div>
+        <button onClick={handleclick} className=" edu-button hidden"> <i className="fas fa-graduation-cap"></i>Education</button>
+        <div className="form-section edu-form ">
             <h1 className="section-title education-section">Education</h1>
             <form>
                 <div className=" input input-school-div">
@@ -35,7 +47,6 @@ onChange={(e)=>setEducationInfo(prev => ({... prev,degree:e.target.value}))}
                 value={educationInfo.startDate}
 onChange={(e)=>setEducationInfo(prev => ({... prev,startDate:e.target.value}))}
                 >
-
                 </input>
                 </div>
                 <div className=" input input-end-date-div">
@@ -62,7 +73,7 @@ onChange={(e)=>setEducationInfo(prev => ({... prev,location:e.target.value}))}
                 </div>
 
             </form>
-        </div>
+        </div></div>
     )
 } 
 

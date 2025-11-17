@@ -20,14 +20,17 @@ input{
      border: none;
     border-radius: 10px;
     padding: 10px;
-     white-space: normal;   /* Allow text to wrap */
-    word-wrap: break-word; /* Break long words if needed */
+     white-space: normal;  
+    word-wrap: break-word; 
     overflow-wrap: break-word;
 }
 textarea{
-    resize: vertical;     /* user can adjust height */
+    resize: vertical;    
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-sizing: border-box;
+}
+.hidden{
+    display: none;
 }
